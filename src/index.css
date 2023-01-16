@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-mm{
+    background-image: url(../public/images/Register\ page.jpg);
+}
+.bg-bb{
+    background-image: url(../public/images/Left\ content.jpg);
+}
+.bg-fb{
+    background-image: url(../public/images/Frame\ 57.jpg);
+}
+.bg-chat{
+    background-image: url(../public/images/chat\ interface2.jpg);
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.logo{
+    background: linear-gradient( to right, #0099f7, #01a9f0, #00a5fb, #0094f4);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
