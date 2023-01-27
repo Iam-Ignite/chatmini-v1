@@ -88,8 +88,8 @@ export default function Register() {
 	};
 
 	return (
-		<div className='h-screen bg-cover bg-no-repeat bg-mm flex sm:justify-center'>
-			<div className=' h-screen bg-cover px-20 w-[40vw] sm:hidden bg-no-repeat bg-bb flex flex-col items-center justify-center'>
+		<div className='h-screen bg-cover bg-no-repeat bg-mm md:flex justify-center'>
+			<div className=' h-screen bg-cover px-20 w-full md:w-[40vw]  hidden bg-no-repeat bg-bb md:flex flex-col items-center justify-center'>
 				<h1 className='text-5xl font-bold text-white'>
 					Welcome Back!
 				</h1>
@@ -104,8 +104,8 @@ export default function Register() {
 				</Link>
 			</div>
 
-			<div className='p-10 flex w-[60vw] sm:p-0 flex-col items-center '>
-				<h1 className='text-5xl sm:text-xl sm:mt-12 font-bold'>
+			<div className='md:p-10 flex md:w-[60vw] overflow-x-auto h-screen p-5 flex-col items-center '>
+				<h1 className='md:text-5xl text-xl mt-0 md:mt-6 font-bold'>
 					Create Account
 				</h1>
 				<p className='text-lg text-center font-normal'>
@@ -132,7 +132,7 @@ export default function Register() {
 					</div>
 					<label
 						htmlFor='file'
-						className='my-3 bg-white max-w-lg cursor-pointer w-full border-dashed border border-black flex items-center rounded-md px-5 py-4'>
+						className='md:my-3 my2 bg-white max-w-lg cursor-pointer w-full border-dashed border border-black flex items-center rounded-md px-4 md:px-5 py-3 md:py-4'>
 						<img
 							src='/images/addpic.svg'
 							alt=''
@@ -151,7 +151,7 @@ export default function Register() {
 					/>
 					<label
 						htmlFor=''
-						className='my-3 max-w-lg w-full bg-white rounded-lg px-5 py-2 flex border border-[#222] items-center'>
+						className='md:my-3 my-2 max-w-lg w-full bg-white rounded-lg md:px-5 px-3 md:py-2 py-1 flex border border-[#222] items-center'>
 						<img
 							src='/images/profile.svg'
 							className='h-6'
@@ -166,7 +166,7 @@ export default function Register() {
 					</label>
 					<label
 						htmlFor=''
-						className='my-3 max-w-lg w-full bg-white rounded-lg px-5 py-2 flex border border-[#222] items-center'>
+						className='md:my-3 my-2 max-w-lg w-full bg-white rounded-lg md:px-5 px-3 md:py-2 py-1 flex border border-[#222] items-center'>
 						<img
 							src='/images/email.svg'
 							alt='email'
@@ -196,7 +196,7 @@ export default function Register() {
 					</label>
 					<p>6 or more characters</p>
 					{error && <span>Something went wrong</span>}
-					<b className='py-5'>
+					<b className='md:py-5 py-2'>
 						By registering you agree to our{' '}
 						<span className='text-[#00B4D8]'>Terms</span>{' '}
 						and{' '}
@@ -206,19 +206,19 @@ export default function Register() {
 					</b>
 					{!loading ? (
 						<>
-							<button className='text-xl font-normal rounded-lg px-10 py-4 bg-[#00B4D8] text-center text-white border'>
+							<button className='text-xl font-normal rounded-lg md:px-10 py-3 md:py-4 bg-[#00B4D8] text-center text-white border'>
 								Sign Up
 							</button>
 							<Link
 								to='/login'
-								className='text-xl  mt-4 font-medium rounded-lg px-9  sms:block hidden  py-4 border-[#00B4D8] text-center text-[#00B4D8] border'>
+								className='text-xl  mt-4 font-medium rounded-lg px-9  block md:hidden  py-3  md:py-4 border-[#00B4D8] text-center text-[#00B4D8] border'>
 								Sign in
 							</Link>
 						</>
 					) : (<>
 					{error ? (
                       <>
-					  	<button className='text-xl font-normal rounded-lg px-10 py-4 bg-[#00B4D8] text-center text-white border'>
+					  	<button className='text-xl font-normal rounded-lg px-10 py-3 md:py-4 bg-[#00B4D8] text-center text-white border'>
 								Sign Up
 							</button>
 							<Link
@@ -233,7 +233,7 @@ export default function Register() {
 							<div className='bg-[#2222223b] absolute h-screen w-screen left-0 top-0 z-50'></div>
 							<button
 								type='button'
-								className='text-xl font-normal py-3 rounded-lg px-10  bg-[#58ddf7ec] text-center text-white border '
+								className='text-xl font-normal py-3 md:py-3 rounded-lg px-10  bg-[#58ddf7ec] text-center text-white border '
 								disabled>
 								Signing...
 							</button>
@@ -245,7 +245,7 @@ export default function Register() {
 					)}
 				</form>
 			</div>
-			<p className='absolute right-10 bottom-4'>
+			<p className='absolute mt-2 mx-2 md:right-10 bottom-4'>
 				&copy; 2023 Friends signup form. All right reserved
 				| Design by{' '}
 				<span className='text-[#00B4D8]'>Deityui</span>

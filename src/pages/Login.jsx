@@ -34,12 +34,12 @@ export default function Login() {
 	};
 
 	return (
-		<div className='h-screen bg-cover bg-no-repeat bg-mm flex sm:justify-center'>
-			<div className='p-20 sm:p-0 flex w-[60vw] flex-col items-center justify-center '>
-				<h1 className='text-5xl sm:text-xl font-bold'>
+		<div className='h-screen bg-cover bg-no-repeat bg-mm md:flex md:justify-center'>
+			<div className='p-20 md:p-0 flex w-full md:w-[60vw] flex-col items-center justify-center '>
+				<h1 className='md:text-5xl text-xl font-bold'>
 					Sign in to your Account
 				</h1>
-				<p className='text-lg sm:text-sm mt-3 text-center font-normal '>
+				<p className='md:text-lg text-sm mt-3 text-center font-normal '>
 					To keep connected with friends please login <br />{' '}
 					with your personal info
 				</p>
@@ -92,7 +92,7 @@ export default function Login() {
 							ref={passwordRef}
 						/>
 					</label>
-					<p>6 or more characters</p>
+					<p className='my-3'> 6 or more characters</p>
 					{errors && <span>{errors}</span>}
 
 					{!loading ? (
@@ -102,9 +102,10 @@ export default function Login() {
 							</button>
 							<Link
 								to='/register'
-								className='text-xl  mt-4 font-medium rounded-lg px-9  sms:block hidden  py-4 border-[#00B4D8] text-center text-[#00B4D8] border'>
+								className='text-xl  mt-4 font-medium rounded-lg px-9  block md:hidden  py-4 border-[#00B4D8] text-center text-[#00B4D8] border'>
 								Sign up
 							</Link>
+							
 						</>
 					) : (
 						<>
@@ -119,11 +120,11 @@ export default function Login() {
 					)}
 				</form>
 			</div>
-			<div className=' h-screen bg-cover px-20 w-[40vw] bg-no-repeat bg-bb flex flex-col items-center justify-center md:hidden'>
-				<h1 className='text-5xl sm:text-lg font-bold text-white'>
+			<div className=' h-screen bg-cover px-20 w-[40vw] bg-no-repeat bg-bb flex-col items-center justify-center md:flex hidden'>
+				<h1 className='md:text-5xl text-lg font-bold text-white'>
 					Welcome Back!
 				</h1>
-				<p className='text-xl sm:text-sm text-center my-3 font-light text-white'>
+				<p className='md:text-xl text-sm text-center my-3 font-light text-white'>
 					Enter your personal Details to start your fun
 					journey with us
 				</p>

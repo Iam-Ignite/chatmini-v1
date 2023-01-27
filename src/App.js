@@ -12,9 +12,9 @@ import { useContext } from "react";
 
 
 function App() {
+
  
- const { currentUser } = useContext(AuthContext);
- 
+ const { currentUser } = useContext(AuthContext); 
 
  const ProtectedRoute = ({children}) => {
      if(!currentUser){

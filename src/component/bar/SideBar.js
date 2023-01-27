@@ -5,12 +5,12 @@ import { auth } from '../utils/firebase';
 import SearchUser from './SearchUser';
 
 
-function SideBar({ user, loading, setUsername,setUser, err }) {
+function SideBar({ user,sidebar,setIsNewMessage, loading, setUsername,setUser, err }) {
 
 
     return (
-        <div className='relative overflow-hidden h-[90vh] flex'>
-            <div className="bg-fb w-28 flex justify-center bg-cover bg-no-repeat h-screen">
+        <div className='relative overflow-hidden h-[90vh] border flex'>
+            <div className={`bg-fb w-28 md:flex justify-center bg-cover h bg-no-repeat h-screen ${!sidebar ? "hidden" : 'flex'}`}>
                 <div className="absolute bottom-8">
                     <ul>
                         <li className='flex justify-center flex-col items-center text-white text-xs mb-5 cursor-pointer'><img className='h-6' src="/images/nights_stay.svg" alt="darkmode" />Dark Theme</li>
@@ -34,14 +34,14 @@ function SideBar({ user, loading, setUsername,setUser, err }) {
                         <>
                             {
                                 user && (
-                                    <SearchUser user={user} setUsername={setUsername} setUser={setUser} err={err} />
+                                    <SearchUser user={user} setIsNewMessage={setIsNewMessage} setUsername={setUsername} setUser={setUser} err={err} />
                                 )
                             }
                         </>
 
                     )
                 }
-                <ChatBox />
+                <ChatBox setIsNewMessage={setIsNewMessage} />
             </div>
         </div>
     )
